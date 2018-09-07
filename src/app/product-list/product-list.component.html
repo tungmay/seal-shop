@@ -1,0 +1,12 @@
+<router-outlet></router-outlet>
+<div class="row" >
+  <div class="col-md-4" *ngFor="let item of listItem">
+    <div class="panelList">
+      <img width="200" height="300" src="{{ item.imageUrl }}" alt="">
+
+      <h2> {{ item.title | title: 'Name' }}</h2>
+      <h4> {{ item.price | currency: 'THB' : 'symbol-narrow' | title: 'Price' }}</h4>
+      <button (click)="addToCart(item)" class="btn btn-success">Add to cart</button>
+    </div>
+  </div>
+</div>
