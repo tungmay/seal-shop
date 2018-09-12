@@ -20,8 +20,17 @@
                 </ul>
               </li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
+          <!-- <ul class="nav navbar-nav navbar-right">
             <li><a routerLink="/cart" style="font-size:20px;"><span id="itemCount"></span><span class="glyphicon glyphicon-shopping-cart"></span> </a></li>
+          </ul> -->
+
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a routerLink="/cart">
+                <span class="glyphicon glyphicon-shopping-cart" ></span>
+                <span class="badge badge-danger">0 {{cartItemCount}}</span>
+              </a>
+            </li>
           </ul>
         </div>
       </nav>

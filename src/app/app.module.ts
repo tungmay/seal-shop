@@ -21,9 +21,8 @@ import { BgColorDirective } from './bg-color.directive';
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      { path: "", component: ProductListComponent, children: [
-        { path: "cart", component: ShoppingCartComponent },
-      ] },
+      { path: "", component: ProductListComponent },
+      { path: "cart", component: ShoppingCartComponent },
       { path: "about", loadChildren: "../about/about.module#AboutModule" },
     ]),
     ReactiveFormsModule
@@ -32,3 +31,12 @@ import { BgColorDirective } from './bg-color.directive';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+// RouterModule.forRoot([
+      
+//   { path: "", component: ProductListComponent, children: [
+//     { path: "cart", component: ShoppingCartComponent },
+//   ] },
+//   { path: "about", loadChildren: "../about/about.module#AboutModule" },
+// ]),
