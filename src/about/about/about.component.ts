@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 
+
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -22,4 +24,14 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
   }
 
+  latitude = 51.678418;
+  longitude = 7.809007;
+  locationChosen = false;
+
+  onChoseLocation(event){
+    // console.log(event);
+    this.latitude = event.coords.lat;
+    this.longitude = event.coords.lng;
+    this.locationChosen = true;
+  }
 }

@@ -1,3 +1,9 @@
+<agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)">
+  <agm-marker 
+  [latitude]="latitude" 
+  [longitude]="longitude"
+  *ngIf="locationChosen"></agm-marker>
+</agm-map>
 <div class="col-md-8 col-md-offset-2">
   <div class="text-center">
     <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme"
@@ -17,3 +23,4 @@
     <br>
   </div>
 </div>
+
