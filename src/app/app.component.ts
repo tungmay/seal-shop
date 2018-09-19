@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductService } from './product.service';
+import { CartService } from './cart.service';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,7 @@ export class AppComponent {
 
   toggleCart = false;
 
-  constructor(productService: ProductService){
+  constructor(productService: ProductService, private cartService: CartService){
     productService.itemList = this.listItem;
   }
 }

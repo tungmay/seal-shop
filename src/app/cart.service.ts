@@ -1,16 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Item } from './item';
 import { CartItem } from './cart';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ProductService } from './product.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 
-  private itemList: CartItem
+  private itemList: CartItem;
+  private itemCout: ShoppingCartComponent;
+  private count: number = 0;
 
-  constructor() {
-    this.itemList = {};
+  constructor(private productService: ProductService) {
+    this.itemList = {};90
   }
 
   getItems() {
@@ -26,5 +30,6 @@ export class CartService {
         amount: 1
       }
     }
+    this.count++;
   }
 }
